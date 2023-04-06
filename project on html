@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Read File Word by Word</title>
+</head>
+<body>
+    <img src = "C:\Users\DELL\Downloads\File-Manager-HD-e1604905472147.png" width="400px" height = "200px" alt="img should display in quality">
+</body>
+<style>
+    img{
+        background-color: yellowgreen;
+        border-width: 20px;
+        padding-left: 1px;
+        position: relative;
+        box-sizing: border-box;
+        border-style: groove;
+    }
+</style>
+<body>
+  <center>
+  <h1>TEXT FILE READER</h1>
+  <h4>myfile.txt</h4>
+  </center>
+  <style>
+    
+  h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color:green;
+  }
+  h2{
+    color:black;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    border-style: groove;
+    align-items: flex-start;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  #output {
+    font-size: 15px;
+    line-height: 1.5;
+    color:  red;
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;  
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  </style>
+  <center>
+	<button onclick="readFile()">Read File</button>
+  </h1>
+  <h2>Required input</h2>
+  <p> Paragraph are the group of sentences combined together about a certain topic It is a very important form of writing as we write almost everything in paragraphs be it an answer essay story emails etc We can say that a well-structured paragraph is the essence of good writing The purposes of the paragraph are to give information to explain something, to tell a story and to convince someone that our idea is right.bnv bnbnb</p>
+
+  <h2> output</h2>
+	<pre id="output"></pre>
+	<script src="script.js"></script>
+  </center>
+  </div>
+</div>
+</body>
+</html>
+<script>
+    function readFile() {
+  var fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.addEventListener("change", function() {
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      var text = event.target.result;
+      if (!file.type.startsWith('text/')) {
+      alert('Please choose a text file.');
+      return;
+    }
+      var words = text.split(/\s+/);
+      var output = document.getElementById("output");
+      for (var i = 0; i < words.length; i += 74) {
+
+        output.innerHTML += words[i] + "<br>";
+
+        if (i + 1 < words.length) {
+          output.innerHTML += words[i + 1] + " ";
+        }
+        if (i + 2 < words.length) {
+          output.innerHTML += words[i + 2] + " ";
+        }
+        output.innerHTML += "<br>";
+        if (i + 3 < words.length) {
+          output.innerHTML += words[i + 3] + " ";
+        }
+        if (i + 4 < words.length) {
+          output.innerHTML += words[i + 4] + " ";
+        }
+        if (i + 5 < words.length) {
+          output.innerHTML += words[i + 5] + " ";
+        }
+
+        output.innerHTML+= "<br>";
+
+        if (i + 6 < words.length) {
+          output.innerHTML += words[i + 6] + " ";
+        }
+        if (i + 7 < words.length) {
+          output.innerHTML += words[i + 7] + " ";
+        }
+        if (i + 8 < words.length) {
+          output.innerHTML += words[i + 8] + " ";
+        }
+        if (i + 9 < words.length) {
+          output.innerHTML += words[i + 9] + " ";
+        }
+
+        output.innerHTML += "<br>";
+
+        if (i + 10 < words.length) {
+          output.innerHTML += words[i + 10] + " ";
+        }
+        if (i + 11 < words.length) {
+          output.innerHTML += words[i + 11] + " ";
+        }
+        if (i + 12 < words.length) {
+          output.innerHTML += words[i + 12] + " ";
+        }
+        if (i + 13 < words.length) {
+          output.innerHTML += words[i + 13] + " ";
+        }
+        if (i + 14 < words.length) {
+          output.innerHTML += words[i + 14] + " ";
+        }
+
+        output.innerHTML += "<br>";
+
+        if (i + 15 < words.length) {
+          output.innerHTML += words[i + 15] + " ";
+        }
+        if (i + 16 < words.length) {
+          output.innerHTML += words[i + 16] + " ";
+        }
+        if (i + 17 < words.length) {
+          output.innerHTML += words[i + 17] + " ";
+        }
+        if (i + 18 < words.length) {
+          output.innerHTML += words[i + 18] + " ";
+        }
+        if (i + 19 < words.length) {
+          output.innerHTML += words[i + 19] + " ";
+        }
+        if (i + 20 < words.length) {
+          output.innerHTML += words[i + 20] + " ";
+        }
+
+        output.innerHTML+= "<br>";
+
+        if (i + 21 < words.length) {
+          output.innerHTML += words[i + 21] + " ";
+        }
+        if (i + 22 < words.length) {
+          output.innerHTML += words[i + 22] + " ";
+        }
+        if (i + 23 < words.length) {
+          output.innerHTML += words[i + 23] + " ";
+        }
+        if (i + 24 < words.length) {
+          output.innerHTML += words[i + 24] + " ";
+        }
+        if (i + 25 < words.length) {
+          output.innerHTML += words[i + 25] + " ";
+        }
+        if (i + 26 < words.length) {
+          output.innerHTML += words[i + 26] + " ";
+        }
+        if (i + 27 < words.length) {
+          output.innerHTML += words[i + 27] + " ";
+        }
+
+        output.innerHTML+= "<br>";
+
+        if (i + 28 < words.length) {
+          output.innerHTML += words[i + 28] + " ";
+        }
+        if (i + 29 < words.length) {
+          output.innerHTML += words[i + 29] + " ";
+        }
+        if (i + 30 < words.length) {
+          output.innerHTML += words[i + 30] + " ";
+        }
+        if(i+31 <words.length)
+        {
+            output.innerHTML += words[i+31] + " ";
+        }
+        if(i+32 <words.length)
+        {
+            output.innerHTML += words[i+32] + " ";
+        }
+        if(i+33 <words.length)
+        {
+            output.innerHTML += words[i+33]+ " ";
+        }
+        if(i+34 <words.length)
+        {
+            output.innerHTML += words[i+34]+ " ";
+        }
+        if(i+35 <words.length)
+        {
+            output.innerHTML += words[i+35] + " ";
+        }
+         output.innerHTML += "<br>";
+
+         if(i+36 <words.length)
+        {
+            output.innerHTML += words[i+36] + " ";
+        }
+        if(i+37 <words.length)
+        {
+            output.innerHTML += words[i+37] + " ";
+        }
+        if(i+38 <words.length)
+        {
+            output.innerHTML += words[i+38] + " ";
+        }
+        if(i+39 <words.length)
+        {
+            output.innerHTML += words[i+39] + " ";
+        }
+        if(i+40 <words.length)
+        {
+            output.innerHTML += words[i+40] + " ";
+        }
+        if(i+41 <words.length)
+        {
+            output.innerHTML += words[i+41] + " ";
+        }
+        if(i+42 <words.length)
+        {
+            output.innerHTML += words[i+42] + " ";
+        }
+        if(i+43 <words.length)
+        {
+            output.innerHTML += words[i+43] + " ";
+        }
+
+        output.innerHTML+= "<br>";
+
+        if(i+44 <words.length)
+        {
+            output.innerHTML += words[i+44] + " ";
+        }
+        if(i+45 <words.length)
+        {
+            output.innerHTML += words[i+45] + " ";
+        }
+        if(i+46 <words.length)
+        {
+            output.innerHTML += words[i+46] + " ";
+        }
+        if(i+47 <words.length)
+        {
+            output.innerHTML += words[i+47] + " ";
+        }
+        if(i+48 <words.length)
+        {
+            output.innerHTML += words[i+48] + " ";
+        }
+        if(i+49 <words.length)
+        {
+            output.innerHTML += words[i+49] + " ";
+        }
+        if(i+50 <words.length)
+        {
+            output.innerHTML += words[i+50] + " ";
+        }
+        if(i+51 <words.length)
+        {
+            output.innerHTML += words[i+51] + " ";
+        }
+        if(i+52 <words.length)
+        {
+            output.innerHTML += words[i+52] + " ";
+        }
+        if(i+53 <words.length)
+        {
+            output.innerHTML += words[i+53] + " ";
+        }
+
+        output.innerHTML+= "<br>";
+
+        if(i+54 <words.length)
+        {
+            output.innerHTML += words[i+54] + " ";
+        }
+        if(i+55 <words.length)
+        {
+            output.innerHTML += words[i+55] + " ";
+        }
+        if(i+56 <words.length)
+        {
+            output.innerHTML += words[i+56] + " ";
+        }
+        if(i+57 <words.length)
+        {
+            output.innerHTML += words[i+57] + " ";
+        }
+        if(i+58 <words.length)
+        {
+            output.innerHTML += words[i+58] + " ";
+        }
+        if(i+59 <words.length)
+        {
+            output.innerHTML += words[i+59] + " ";
+        }
+        if(i+60 <words.length)
+        {
+            output.innerHTML += words[i+60] + " ";
+        }
+        if(i+61 <words.length)
+        {
+            output.innerHTML += words[i+61] + " ";
+        }
+        if(i+62 <words.length)
+        {
+            output.innerHTML += words[i+62] + " ";
+        }
+        if(i+63 <words.length)
+        {
+            output.innerHTML += words[i+63] + " ";
+        }
+        if(i+64 <words.length)
+        {
+            output.innerHTML += words[i+64] + " ";
+        }
+        
+        output.innerHTML+= "<br>";
+
+        if(i+65 <words.length)
+        {
+            output.innerHTML += words[i+65] + " ";
+        }
+        if(i+66 <words.length)
+        {
+            output.innerHTML += words[i+66] + " ";
+        }
+        if(i+67 <words.length)
+        {
+            output.innerHTML += words[i+67] + " ";
+        }
+        if(i+68 <words.length)
+        {
+            output.innerHTML += words[i+68] + " ";
+        }
+        if(i+69 <words.length)
+        {
+            output.innerHTML += words[i+69] + " ";
+        }
+        if(i+70 <words.length)
+        {
+            output.innerHTML += words[i+70] + " ";
+        }
+        if(i+71 <words.length)
+        {
+            output.innerHTML += words[i+71] + " ";
+        }
+        if(i+72 <words.length)
+        {
+            output.innerHTML += words[i+72] + " ";
+        }
+        if(i+73 <words.length)
+        {
+            output.innerHTML += words[i+73] + " ";
+        }
+        output.innerHTML +="<br>";
+        
+        
+      }
+    };
+    reader.readAsText(file);
+  });
+  fileInput.click();
+}
+</script>
+
